@@ -44,8 +44,9 @@ class User(AbstractUser):
 
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     dob = models.DateField(null=True, blank=True)
-    mobile = PhoneNumberField(null=True, unique=True)
+    mobile = PhoneNumberField(null= True, unique=True)
     country = CountryField(null=True)
+    address = models.CharField(null=True, max_length=500)
 
     objects = UserManager()
 
